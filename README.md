@@ -3,7 +3,7 @@
 A colorscheme for the GUI inspired by the dark variant of the [Firefox DevTools](https://developer.mozilla.org/en-US/docs/Tools).
 
 ## Installation
-You can use any package manager to install firefox.vim.
+You can use any package manager to install quantum.vim.
 
 ## Usage
 ```VimL
