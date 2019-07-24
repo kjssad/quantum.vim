@@ -11,5 +11,13 @@ set termguicolors     " enable true colors support
 colorscheme quantum
 ```
 
+## Lightline support
+![lightline preview](https://raw.githubusercontent.com/kjssad/firefox.vim/master/img/lightline_preview.png)
+```
+let g:lightline = {
+  \ 'colorscheme': 'quantum',
+  \ }
+```
+
 ## Warning
 `quantum` works only if VIM supports `termguicolors` option. This is true for [Neovim](https://neovim.io) and VIM from 7.4.1799.
