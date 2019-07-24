@@ -7,7 +7,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = "firefox"
+let g:colors_name = "quantum"
 
 " This function is based on one from https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
