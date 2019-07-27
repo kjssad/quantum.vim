@@ -1,21 +1,22 @@
 ![quantum.vim](https://raw.githubusercontent.com/kjssad/firefox.vim/master/img/preview.png)
 
-A colorscheme for the GUI inspired by the dark variant of the [Firefox DevTools](https://developer.mozilla.org/en-US/docs/Tools).
+A colorscheme for the GUI inspired by [Firefox DevTools](https://developer.mozilla.org/en-US/docs/Tools).
 
 ## Installation
 You can use any package manager to install quantum.vim.
 
 ## Usage
-```VimL
-set termguicolors     " enable true colors support
+```vimscript
+set termguicolors   " enable true colors support
+set background=dark " dark theme
+" set background=light " light theme
 colorscheme quantum
 ```
 
 ## Lightline support
-![lightline preview](https://raw.githubusercontent.com/kjssad/firefox.vim/master/img/lightline_preview.png)
-```
+```vimscript
 let g:lightline = {
-  \ 'colorscheme': 'quantum',
+  \ 'colorscheme': 'quantum'
   \ }
 ```
 
