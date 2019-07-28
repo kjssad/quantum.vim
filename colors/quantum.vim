@@ -47,8 +47,8 @@ else
   let s:fg_sec      = '#4A4A4F'
   let s:fg_alt      = '#535351'
   let s:comment     = '#737373'
-  let s:guides      = '#DBDBDB'
-  let s:visual      = '#D7D7DB'
+  let s:guides      = '#D7D7DB'
+  let s:visual      = '#DBDBDB'
   let s:background  = '#FFFFFF'
   let s:border      = '#B1B1B3'
 
@@ -70,7 +70,7 @@ endif
 
 " Highlight Groups (see `:help highlight-groups`) {{{
 call s:h("ColorColumn", { "bg": s:border })
-call s:h("Conceal", { "fg": s:guides })
+call s:h("Conceal", { "fg": s:visual })
 call s:h("Cursor", { "fg": s:background, "bg": s:cursor })
 call s:h("CursorIM", {})
 call s:h("CursorColumn", { "bg": s:guides })
@@ -97,11 +97,11 @@ call s:h("CursorLineNr", { "fg": s:fg_sec })
 call s:h("MatchParen", { "fg": s:foreground, "bg": s:comment, "gui": "underline" })
 call s:h("ModeMsg", {})
 call s:h("MoreMsg", {})
-call s:h("NonText", { "fg": s:guides })
+call s:h("NonText", { "fg": s:visual })
 call s:h("Normal", { "fg": s:foreground, "bg": s:background })
-call s:h("Pmenu", { "fg": s:fg_sec, "bg": s:guides })
+call s:h("Pmenu", { "fg": s:fg_sec, "bg": s:visual })
 call s:h("PmenuSel", { "fg": s:foreground, "bg": s:comment })
-call s:h("PmenuSbar", { "bg": s:guides })
+call s:h("PmenuSbar", { "bg": s:visual })
 call s:h("PmenuThumb", { "bg": s:comment })
 call s:h("Question", { "fg": s:constant })
 call s:h("QuickFixLine", { "fg": s:background, "bg": s:string })
