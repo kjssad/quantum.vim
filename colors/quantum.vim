@@ -30,10 +30,10 @@ if &background ==# 'dark'
   let s:background  = '#2a2a2e'
   let s:border      = '#1b1b1d'
 
-  let s:cursor      = '#D7D7DB'
   let s:highlight   = '#434347'
   let s:line        = '#303034'
   let s:search      = '#58585C'
+  let s:virtualtext = '#4A4A4F'
 
   let s:keyword     = '#FF7DE9'
   let s:special     = '#75BFFF'
@@ -42,6 +42,7 @@ if &background ==# 'dark'
   let s:type        = '#FF7DE9'
   let s:constant    = '#B98EFF'
   let s:error       = '#EB5368'
+  let s:warning     = '#FFF89E'
 else
   let s:foreground  = '#38383D'
   let s:fg_sec      = '#4A4A4F'
@@ -52,10 +53,10 @@ else
   let s:background  = '#FFFFFF'
   let s:border      = '#B1B1B3'
 
-  let s:cursor      = '#0074E8'
   let s:highlight   = '#DCDCDD'
   let s:line        = '#F1F1F2'
   let s:search      = '#C4C4C6'
+  let s:virtualtext = '#B1B1B3'
 
   let s:keyword     = '#DD00A9'
   let s:special     = '#0074E8'
@@ -63,7 +64,8 @@ else
   let s:function    = '#058B00'
   let s:type        = '#DD00A9'
   let s:constant    = '#8000D7'
-  let s:error       = '#EB5368'
+  let s:error       = '#d70022'
+  let s:warning     = '#A47F00'
 endif
 
 " }}}
@@ -71,7 +73,7 @@ endif
 " Highlight Groups (see `:help highlight-groups`) {{{
 call s:h("ColorColumn", { "bg": s:border })
 call s:h("Conceal", { "fg": s:visual })
-call s:h("Cursor", { "fg": s:background, "bg": s:cursor })
+call s:h("Cursor", { "fg": s:background, "bg": s:special })
 call s:h("CursorIM", {})
 call s:h("CursorColumn", { "bg": s:guides })
 if &diff 
@@ -83,14 +85,14 @@ else
 endif
 call s:h("Directory", { "fg": s:fg_alt })
 call s:h("DiffAdd", { "bg": s:function, "fg": s:background })
-call s:h("DiffChange", { "fg": s:special, "gui": "underline" })
+call s:h("DiffChange", { "fg": s:warning, "gui": "underline" })
 call s:h("DiffDelete", { "bg": s:error, "fg": s:background })
-call s:h("DiffText", { "bg": s:special, "fg": s:background })
+call s:h("DiffText", { "bg": s:warning, "fg": s:background })
 call s:h("ErrorMsg", { "fg": s:error })
 call s:h("VertSplit", { "fg": s:border })
 call s:h("Folded", { "fg": s:fg_alt })
 call s:h("FoldColumn", {})
-call s:h("SignColumn", {})
+call s:h("SignColumn", { "bg": s:background })
 call s:h("IncSearch", { "fg": s:background, "bg": s:string })
 call s:h("LineNr", { "fg": s:guides })
 call s:h("CursorLineNr", { "fg": s:fg_sec })
@@ -120,7 +122,7 @@ call s:h("Terminal", { "fg": s:foreground, "bg": s:background })
 call s:h("Title", { "fg": s:string }) 
 call s:h("Visual", { "bg": s:visual })
 call s:h("VisualNOS", {})
-call s:h("WarningMsg", { "fg": s:special })
+call s:h("WarningMsg", { "fg": s:warning })
 call s:h("WildMenu", { "fg": s:background, "bg": s:string })
 " }}}
 
@@ -199,7 +201,7 @@ hi link NERDTreeDirSlash    NonText
 
 " VimSignify
 call s:h("SignifySignAdd", { "fg": s:function })
-call s:h("SignifySignChange", { "fg": s:special })
+call s:h("SignifySignChange", { "fg": s:warning })
 call s:h("SignifySignDelete", { "fg": s:error })
 
 " Vim-illuminate
@@ -210,6 +212,17 @@ hi link fugitiveHash Keyword
 
 " ALE
 call s:h("ALESignColumnWithoutErrors", {})
+
+" coc.nvim
+call s:h("CocHighlightText", { "bg": s:highlight })
+call s:h("CocCodeLens", { "fg": s:virtualtext })
+hi link CocErrorSign Error
+hi link CocWarningSign WarningMsg
+hi link CocInfoSign SpecialChar
+hi link CocHintSign Function
+hi link CocGitAddedSign SignifySignAdd
+hi link CocGitChangedSign SignifySignChange
+hi link CocGitRemovedSign SignifySignDelete
 "" }}}
 
 " Nvim Terminal {{{
