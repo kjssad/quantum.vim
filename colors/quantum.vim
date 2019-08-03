@@ -39,10 +39,10 @@ if &background ==# 'dark'
   let s:special     = '#75BFFF'
   let s:string      = '#6B89FF'
   let s:function    = '#87DE74'
-  let s:type        = '#FF7DE9'
-  let s:constant    = '#B98EFF'
+  let s:type        = '#B98EFF'
+  let s:constant    = '#6B89FF'
   let s:error       = '#EB5368'
-  let s:warning     = '#FFF89E'
+  let s:warning     = '#FFD866'
 else
   let s:foreground  = '#38383D'
   let s:fg_sec      = '#4A4A4F'
@@ -188,6 +188,15 @@ call s:h("rubySymbol", { "fg": s:special })
 hi link rubyClassName   Function
 hi link rubyModuleName  Function
 hi link RubyConstant    Constant
+
+" HTML
+hi link htmlTitle   Identifier
+hi link htmlArg     Keyword
+hi link htmlTag     Delimiter
+hi link htmlEndTag  Delimiter
+hi link htmlH1      Identifier
+call s:h("htmlTagName", { "fg": s:special, "gui": "italic" })
+call s:h("htmlLink", { "fg": s:function, "gui": "underline" })
 "" }}}"
 
 " Plugin Highlights {{{
@@ -223,6 +232,7 @@ hi link CocHintSign Function
 hi link CocGitAddedSign SignifySignAdd
 hi link CocGitChangedSign SignifySignChange
 hi link CocGitRemovedSign SignifySignDelete
+call s:h("CocGitChangeRemovedSign", { "fg": s:string })
 "" }}}
 
 " Nvim Terminal {{{
