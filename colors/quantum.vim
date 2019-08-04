@@ -238,7 +238,7 @@ call s:h("CocGitChangeRemovedSign", { "fg": s:string })
 " Nvim Terminal {{{
 if has("nvim")
   let g:terminal_color_0 = s:background
-  let g:terminal_color_1 = s:keyword
+  let g:terminal_color_1 = s:error
   let g:terminal_color_2 = s:function
   let g:terminal_color_3 = s:warning
   let g:terminal_color_4 = s:special
