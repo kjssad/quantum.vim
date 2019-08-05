@@ -109,7 +109,7 @@ call s:h("Question", { "fg": s:constant })
 call s:h("QuickFixLine", { "fg": s:background, "bg": s:string })
 call s:h("Search", { "bg": s:search })
 call s:h("SpecialKey", { "fg": s:guides })
-call s:h("SpellBad", { "fg": s:keyword, "gui": "underline" }) 
+call s:h("SpellBad", { "fg": s:keyword, "gui": "undercurl" }) 
 call s:h("SpellCap", { "fg": s:special })
 call s:h("SpellLocal", { "fg": s:special })
 call s:h("SpellRare", { "fg": s:special })
@@ -225,6 +225,10 @@ call s:h("ALESignColumnWithoutErrors", {})
 " coc.nvim
 call s:h("CocHighlightText", { "bg": s:highlight })
 call s:h("CocCodeLens", { "fg": s:virtualtext })
+call s:h("CocErrorHighlight", { "gui": "undercurl", "sp": s:error })
+call s:h("CocWarningHighlight", { "gui": "undercurl", "sp": s:warning })
+call s:h("CocInfoHighlight", { "gui": "undercurl", "sp": s:special })
+call s:h("CocHintHighlight", { "gui": "undercurl", "sp": s:function })
 hi link CocErrorSign Error
 hi link CocWarningSign WarningMsg
 hi link CocInfoSign SpecialChar
