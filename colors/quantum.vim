@@ -62,8 +62,8 @@ else
   let s:special     = '#0074E8'
   let s:string      = '#003EAA'
   let s:function    = '#058B00'
-  let s:type        = '#DD00A9'
-  let s:constant    = '#8000D7'
+  let s:type        = '#8000D7'
+  let s:constant    = '#003EAA'
   let s:error       = '#d70022'
   let s:warning     = '#A47F00'
 endif
