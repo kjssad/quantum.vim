@@ -109,7 +109,7 @@ call s:h("Question", { "fg": s:constant })
 call s:h("QuickFixLine", { "fg": s:background, "bg": s:string })
 call s:h("Search", { "bg": s:search })
 call s:h("SpecialKey", { "fg": s:guides })
-call s:h("SpellBad", { "fg": s:keyword, "gui": "undercurl" }) 
+call s:h("SpellBad", { "fg": s:keyword, "gui": "undercurl", "sp": s:error }) 
 call s:h("SpellCap", { "fg": s:special })
 call s:h("SpellLocal", { "fg": s:special })
 call s:h("SpellRare", { "fg": s:special })
@@ -237,6 +237,10 @@ hi link CocGitAddedSign SignifySignAdd
 hi link CocGitChangedSign SignifySignChange
 hi link CocGitRemovedSign SignifySignDelete
 call s:h("CocGitChangeRemovedSign", { "fg": s:string })
+
+" vim-fugitive
+hi link diffAdded SignifySignAdd
+hi link diffRemoved SignifySignDelete
 "" }}}
 
 " Nvim Terminal {{{
@@ -261,3 +265,27 @@ if has("nvim")
   let g:terminal_color_foreground = g:terminal_color_7
 endif
 " }}}"
+
+" " Git {{{
+" hi link gitcommitComment Comment
+" hi link gitcommitUnmerged SignifySignDelete
+" call s:h("gitcommitOnBranch", {})
+" call s:h("gitcommitBranch", { "fg": s:purple })
+" call s:h("gitcommitDiscardedType", { "fg": s:red })
+" call s:h("gitcommitSelectedType", { "fg": s:green })
+" call s:h("gitcommitHeader", {})
+" hi link gitcommitUntrackedFile SignifySignAdd
+" call s:h("gitcommitDiscardedFile", { "fg": s:red })
+" call s:h("gitcommitSelectedFile", { "fg": s:green })
+" hi link gitcommitUnmergedFile SignifySignDelete
+" call s:h("gitcommitFile", {})
+" call s:h("gitcommitSummary", { "fg": s:white })
+" call s:h("gitcommitOverflow", { "fg": s:red })
+" hi link gitcommitNoBranch gitcommitBranch
+" hi link gitcommitUntracked gitcommitUntrackedFile
+" hi link gitcommitDiscarded gitcommitComment
+" hi link gitcommitSelected gitcommitComment
+" hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+" hi link gitcommitSelectedArrow gitcommitSelectedFile
+" hi link gitcommitUnmergedArrow gitcommitUnmergedFile
+" " }}}"
