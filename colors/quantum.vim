@@ -166,11 +166,11 @@ call s:h("Todo", { "fg": s:constant })
 
 " Language Highlights {{{
 " Elixir
+call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
+call s:h("elixirAtom", { "fg": s:special })
 hi link elixirModuleDeclaration Function
 hi link elixirMacroDeclaration  Function
 hi link elixirAlias             Constant
-call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
-call s:h("elixirAtom", { "fg": s:special })
 
 " Javascript
 call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
@@ -190,13 +190,13 @@ hi link rubyModuleName  Function
 hi link RubyConstant    Constant
 
 " HTML
+call s:h("htmlTagName", { "fg": s:special, "gui": "italic" })
+call s:h("htmlLink", { "fg": s:function, "gui": "underline" })
 hi link htmlTitle   Identifier
 hi link htmlArg     Keyword
 hi link htmlTag     Delimiter
 hi link htmlEndTag  Delimiter
 hi link htmlH1      Identifier
-call s:h("htmlTagName", { "fg": s:special, "gui": "italic" })
-call s:h("htmlLink", { "fg": s:function, "gui": "underline" })
 "" }}}"
 
 " Plugin Highlights {{{
@@ -231,14 +231,14 @@ call s:h("CocErrorHighlight", { "gui": "undercurl", "sp": s:error })
 call s:h("CocWarningHighlight", { "gui": "undercurl", "sp": s:warning })
 call s:h("CocInfoHighlight", { "gui": "undercurl", "sp": s:special })
 call s:h("CocHintHighlight", { "gui": "undercurl", "sp": s:function })
-hi link CocErrorSign Error
-hi link CocWarningSign WarningMsg
-hi link CocInfoSign SpecialChar
-hi link CocHintSign Function
-hi link CocGitAddedSign SignifySignAdd
-hi link CocGitChangedSign SignifySignChange
-hi link CocGitRemovedSign SignifySignDelete
 call s:h("CocGitChangeRemovedSign", { "fg": s:string })
+hi link CocErrorSign        Error
+hi link CocWarningSign      WarningMsg
+hi link CocInfoSign         SpecialChar
+hi link CocHintSign         Function
+hi link CocGitAddedSign     SignifySignAdd
+hi link CocGitChangedSign   SignifySignChange
+hi link CocGitRemovedSign   SignifySignDelete
 
 " tpope/vim-fugitive
 hi link diffAdded           SignifySignAdd
