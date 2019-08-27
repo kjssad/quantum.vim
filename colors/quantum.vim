@@ -240,9 +240,11 @@ hi link CocGitChangedSign SignifySignChange
 hi link CocGitRemovedSign SignifySignDelete
 call s:h("CocGitChangeRemovedSign", { "fg": s:string })
 
-" vim-fugitive
-hi link diffAdded SignifySignAdd
-hi link diffRemoved SignifySignDelete
+" tpope/vim-fugitive
+hi link diffAdded           SignifySignAdd
+hi link diffRemoved         SignifySignDelete
+hi link fugitiveHash        Keyword
+hi link fugitiveSymbolicRef SpecialChar
 "" }}}
 
 " Nvim Terminal {{{
