@@ -213,8 +213,10 @@ call s:h("SignifySignAdd", { "fg": s:function })
 call s:h("SignifySignChange", { "fg": s:warning })
 call s:h("SignifySignDelete", { "fg": s:error })
 
-" Vim-illuminate
-call s:h("illuminatedWord", { "bg": s:highlight })
+" airblade/vim-gitgutter
+hi link GitGutterAdd    SignifySignAdd
+hi link GitGutterChange SignifySignChange
+hi link GitGutterDelete SignifySignDelete
 
 " Vim-fugitive
 hi link fugitiveHash Keyword
