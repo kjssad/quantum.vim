@@ -6,15 +6,19 @@ A colorscheme for the GUI inspired by [Firefox DevTools](https://developer.mozil
 You can use any package manager to install quantum.vim.
 
 ## Usage
-```vimscript
-set termguicolors   " enable true colors support
-set background=dark " dark theme
-" set background=light " light theme
+
+```vim
+set termguicolors       " enable true colors support
+
+set background=dark     " dark theme
+" set background=light  " light theme
+
 colorscheme quantum
 ```
 
 ## Lightline support
-```vimscript
+
+```vim
 let g:lightline = {
   \ 'colorscheme': 'quantum'
   \ }
