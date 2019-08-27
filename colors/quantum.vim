@@ -200,7 +200,7 @@ call s:h("htmlLink", { "fg": s:function, "gui": "underline" })
 "" }}}"
 
 " Plugin Highlights {{{
-" NerdTree
+" scrooloose/nerdtree
 hi link NERDTreeOpenable    Directory
 hi link NERDTreeClosable    String
 hi link NERDTreeUp          Directory
@@ -208,7 +208,7 @@ hi link NERDTreeDir         Directory
 hi link NERDTreeFile        Directory
 hi link NERDTreeDirSlash    NonText
 
-" VimSignify
+" mhinz/vim-signify
 call s:h("SignifySignAdd", { "fg": s:function })
 call s:h("SignifySignChange", { "fg": s:warning })
 call s:h("SignifySignDelete", { "fg": s:error })
@@ -218,13 +218,13 @@ hi link GitGutterAdd    SignifySignAdd
 hi link GitGutterChange SignifySignChange
 hi link GitGutterDelete SignifySignDelete
 
-" Vim-fugitive
-hi link fugitiveHash Keyword
+" RRethy/vim-illuminate
+call s:h("illuminatedWord", { "bg": s:highlight })
 
-" ALE
+" dense-analysis/ale
 call s:h("ALESignColumnWithoutErrors", {})
 
-" coc.nvim
+" neoclide/coc.nvim
 call s:h("CocHighlightText", { "bg": s:highlight })
 call s:h("CocCodeLens", { "fg": s:virtualtext })
 call s:h("CocErrorHighlight", { "gui": "undercurl", "sp": s:error })
