@@ -268,26 +268,26 @@ if has("nvim")
 endif
 " }}}"
 
-" " Git {{{
-" hi link gitcommitComment Comment
-" hi link gitcommitUnmerged SignifySignDelete
-" call s:h("gitcommitOnBranch", {})
-" call s:h("gitcommitBranch", { "fg": s:purple })
-" call s:h("gitcommitDiscardedType", { "fg": s:red })
-" call s:h("gitcommitSelectedType", { "fg": s:green })
-" call s:h("gitcommitHeader", {})
-" hi link gitcommitUntrackedFile SignifySignAdd
-" call s:h("gitcommitDiscardedFile", { "fg": s:red })
-" call s:h("gitcommitSelectedFile", { "fg": s:green })
-" hi link gitcommitUnmergedFile SignifySignDelete
-" call s:h("gitcommitFile", {})
-" call s:h("gitcommitSummary", { "fg": s:white })
-" call s:h("gitcommitOverflow", { "fg": s:red })
-" hi link gitcommitNoBranch gitcommitBranch
-" hi link gitcommitUntracked gitcommitUntrackedFile
-" hi link gitcommitDiscarded gitcommitComment
-" hi link gitcommitSelected gitcommitComment
-" hi link gitcommitDiscardedArrow gitcommitDiscardedFile
-" hi link gitcommitSelectedArrow gitcommitSelectedFile
-" hi link gitcommitUnmergedArrow gitcommitUnmergedFile
-" " }}}"
+" gitcommit {{{
+call s:h("gitcommitOnBranch", {})
+call s:h("gitcommitBranch", { "fg": s:special })
+call s:h("gitcommitDiscardedType", { "fg": s:error })
+call s:h("gitcommitSelectedType", { "fg": s:type })
+call s:h("gitcommitHeader", {})
+call s:h("gitcommitDiscardedFile", { "fg": s:error })
+call s:h("gitcommitSelectedFile", { "fg": s:type })
+call s:h("gitcommitFile", {})
+call s:h("gitcommitSummary", { "fg": s:foreground })
+call s:h("gitcommitOverflow", { "fg": s:warning })
+hi link gitcommitComment        Comment
+hi link gitcommitUnmerged       SignifySignDelete
+hi link gitcommitUntrackedFile  SignifySignAdd
+hi link gitcommitUnmergedFile   SignifySignDelete
+hi link gitcommitNoBranch       gitcommitBranch
+hi link gitcommitUntracked      gitcommitUntrackedFile
+hi link gitcommitDiscarded      gitcommitComment
+hi link gitcommitSelected       gitcommitComment
+hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi link gitcommitSelectedArrow  gitcommitSelectedFile
+hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
+" }}}
