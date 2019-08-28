@@ -15,7 +15,7 @@
     <color name="text_fg" value="#D7D7DB"/>
     <color name="text_bg" value="#2a2a2e"/>
     <color name="line_highlight" value="#303034"/>
-    <color name="line_numbers" value="##4A4A4F"/>
+    <color name="line_numbers" value="#4A4A4F"/>
     <color name="selection_color" value="#38383D"/>
     
     <style name="text" foreground="text_fg" background="text_bg"/>
