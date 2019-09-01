@@ -36,11 +36,11 @@ if &background ==# 'dark'
   let s:virtualtext = '#4A4A4F'
 
   let s:keyword     = '#FF7DE9'
-  let s:special     = '#75BFFF'
+  let s:special     = '#FC9867'
   let s:string      = '#6B89FF'
   let s:function    = '#87DE74'
   let s:type        = '#B98EFF'
-  let s:constant    = '#FC9867'
+  let s:constant    = '#75BFFF'
   let s:error       = '#EB5368'
   let s:warning     = '#FFD866'
 else
@@ -59,11 +59,11 @@ else
   let s:virtualtext = '#B1B1B3'
 
   let s:keyword     = '#DD00A9'
-  let s:special     = '#0074E8'
+  let s:special     = '#E84521'
   let s:string      = '#003EAA'
   let s:function    = '#058B00'
   let s:type        = '#8000D7'
-  let s:constant    = '#E84521'
+  let s:constant    = '#0074E8'
   let s:error       = '#d70022'
   let s:warning     = '#A47F00'
 endif
@@ -73,7 +73,7 @@ endif
 " Highlight Groups (see `:help highlight-groups`) {{{
 call s:h("ColorColumn", { "bg": s:border })
 call s:h("Conceal", { "fg": s:visual })
-call s:h("Cursor", { "fg": s:background, "bg": s:special })
+call s:h("Cursor", { "fg": s:background, "bg": s:constant })
 call s:h("CursorIM", {})
 call s:h("CursorColumn", { "bg": s:guides })
 if &diff 
@@ -88,6 +88,8 @@ call s:h("DiffAdd", { "bg": s:function, "fg": s:background })
 call s:h("DiffChange", { "fg": s:warning, "gui": "underline" })
 call s:h("DiffDelete", { "bg": s:error, "fg": s:background })
 call s:h("DiffText", { "bg": s:warning, "fg": s:background })
+call s:h("TermCursor", { "fg": s:background, "bg": s:constant })
+call s:h("TermCursorNC", { "fg": s:background, "bg": s:background })
 call s:h("ErrorMsg", { "fg": s:error })
 call s:h("VertSplit", { "fg": s:border })
 call s:h("Folded", { "fg": s:fg_alt })
@@ -131,10 +133,10 @@ call s:h("Comment", { "fg": s:comment, "gui": "italic" })
 call s:h("Constant", { "fg": s:constant })
 call s:h("String", { "fg": s:string })
 call s:h("Character", { "fg": s:string })
-call s:h("Number", { "fg": s:constant })
-call s:h("Boolean", { "fg": s:constant })
-call s:h("Float", { "fg": s:constant })
-call s:h("Identifier", { "fg": s:foreground })
+call s:h("Number", { "fg": s:string })
+call s:h("Boolean", { "fg": s:string })
+call s:h("Float", { "fg": s:string })
+call s:h("Identifier", { "fg": s:fg_sec, "gui": 'italic' })
 call s:h("Function", { "fg": s:function })
 call s:h("Statement", { "fg": s:keyword })
 call s:h("Conditional", { "fg": s:keyword })
@@ -152,30 +154,28 @@ call s:h("Type", { "fg": s:type, "gui": 'italic' })
 call s:h("StorageClass", { "fg": s:type, "gui": 'italic' })
 call s:h("Structure", { "fg": s:type })
 call s:h("Typedef", { "fg": s:type })
-call s:h("Special", { "fg": s:constant })
+call s:h("Special", { "fg": s:special })
 call s:h("SpecialChar", { "fg": s:special })
 call s:h("Tag", {})
 call s:h("Delimiter", { "fg": s:fg_alt })
-call s:h("SpecialComment", { "fg": s:constant })
+call s:h("SpecialComment", { "fg": s:special })
 call s:h("Debug", {})
 call s:h("Underlined", { "gui": "underline" })
 call s:h("Ignore", {})
 call s:h("Error", { "fg": s:error, "sp": s:error })
-call s:h("Todo", { "fg": s:constant })
+call s:h("Todo", { "fg": s:special })
 " }}}
 
 " Language Highlights {{{
 " Elixir
 call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
-call s:h("elixirAtom", { "fg": s:special })
 hi link elixirModuleDeclaration Function
 hi link elixirMacroDeclaration  Function
-hi link elixirAlias             Constant
 
 " Javascript
-call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
 call s:h("jsThis", { "fg": s:fg_sec, "gui": "italic" })
 call s:h("jsSuper", { "fg": s:fg_sec, "gui": "italic" })
+hi link jsFuncArgs      Identifier
 hi link jsClassKeyword  Type
 hi link jsGlobalObjects Type
 hi link jsPrototype     Type
@@ -184,10 +184,8 @@ hi def link Noise       Delimiter
 " hi link jsObjectProp    Function
 
 " Ruby
-call s:h("rubySymbol", { "fg": s:special })
 hi link rubyClassName   Function
 hi link rubyModuleName  Function
-hi link RubyConstant    Constant
 
 " HTML
 call s:h("htmlTagName", { "fg": s:special, "gui": "italic" })
