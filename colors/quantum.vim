@@ -252,10 +252,13 @@ hi link CocGitRemovedSign       SignifySignDelete
 hi link CocGitTopRemovedSign    SignifySignDelete
 
 " tpope/vim-fugitive
-hi link diffAdded           SignifySignAdd
-hi link diffRemoved         SignifySignDelete
-hi link fugitiveHash        Keyword
-hi link fugitiveSymbolicRef SpecialChar
+hi link diffAdded                   SignifySignAdd
+hi link diffRemoved                 SignifySignDelete
+hi link fugitiveHash                String
+hi link fugitiveSymbolicRef         Structure
+hi link fugitiveUntrackedModifier   Function
+hi link fugitiveUnstagedModifier    WarningMsg
+hi link fugitiveStagedModifier      SpecialChar
 "" }}}
 
 " Nvim Terminal {{{
@@ -283,12 +286,12 @@ endif
 
 " gitcommit {{{
 call s:h("gitcommitOnBranch", {})
-call s:h("gitcommitBranch", { "fg": s:special })
+call s:h("gitcommitBranch", { "fg": s:type })
 call s:h("gitcommitDiscardedType", { "fg": s:error })
-call s:h("gitcommitSelectedType", { "fg": s:type })
+call s:h("gitcommitSelectedType", { "fg": s:special })
 call s:h("gitcommitHeader", {})
 call s:h("gitcommitDiscardedFile", { "fg": s:error })
-call s:h("gitcommitSelectedFile", { "fg": s:type })
+call s:h("gitcommitSelectedFile", { "fg": s:special })
 call s:h("gitcommitFile", {})
 call s:h("gitcommitSummary", { "fg": s:foreground })
 call s:h("gitcommitOverflow", { "fg": s:warning })
