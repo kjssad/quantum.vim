@@ -151,7 +151,7 @@ call s:h("Define", { "fg": s:keyword })
 call s:h("Macro", { "fg": s:keyword })
 call s:h("PreCondit", { "fg": s:keyword })
 call s:h("Type", { "fg": s:type, "gui": 'italic' })
-call s:h("StorageClass", { "fg": s:type, "gui": 'italic' })
+call s:h("StorageClass", { "fg": s:type })
 call s:h("Structure", { "fg": s:type })
 call s:h("Typedef", { "fg": s:type })
 call s:h("Special", { "fg": s:special })
@@ -188,7 +188,7 @@ hi link rubyClassName   Function
 hi link rubyModuleName  Function
 
 " HTML
-call s:h("htmlTagName", { "fg": s:special, "gui": "italic" })
+call s:h("htmlTagName", { "fg": s:constant, "gui": "italic" })
 call s:h("htmlLink", { "fg": s:function, "gui": "underline" })
 hi link htmlTitle   Identifier
 hi link htmlArg     Keyword
@@ -242,7 +242,7 @@ hi link CocGitRemovedSign   SignifySignDelete
 hi link diffAdded           SignifySignAdd
 hi link diffRemoved         SignifySignDelete
 hi link fugitiveHash        Keyword
-hi link fugitiveSymbolicRef SpecialChar
+hi link fugitiveSymbolicRef Constant
 "" }}}
 
 " Nvim Terminal {{{
@@ -270,7 +270,7 @@ endif
 
 " gitcommit {{{
 call s:h("gitcommitOnBranch", {})
-call s:h("gitcommitBranch", { "fg": s:special })
+call s:h("gitcommitBranch", { "fg": s:constant })
 call s:h("gitcommitDiscardedType", { "fg": s:error })
 call s:h("gitcommitSelectedType", { "fg": s:type })
 call s:h("gitcommitHeader", {})
