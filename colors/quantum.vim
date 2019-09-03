@@ -242,13 +242,14 @@ call s:h("CocWarningHighlight", { "gui": "undercurl", "sp": s:warning })
 call s:h("CocInfoHighlight", { "gui": "undercurl", "sp": s:special })
 call s:h("CocHintHighlight", { "gui": "undercurl", "sp": s:function })
 call s:h("CocGitChangeRemovedSign", { "fg": s:string })
-hi link CocErrorSign        Error
-hi link CocWarningSign      WarningMsg
-hi link CocInfoSign         SpecialChar
-hi link CocHintSign         Function
-hi link CocGitAddedSign     SignifySignAdd
-hi link CocGitChangedSign   SignifySignChange
-hi link CocGitRemovedSign   SignifySignDelete
+hi link CocErrorSign            Error
+hi link CocWarningSign          WarningMsg
+hi link CocInfoSign             SpecialChar
+hi link CocHintSign             Function
+hi link CocGitAddedSign         SignifySignAdd
+hi link CocGitChangedSign       SignifySignChange
+hi link CocGitRemovedSign       SignifySignDelete
+hi link CocGitTopRemovedSign    SignifySignDelete
 
 " tpope/vim-fugitive
 hi link diffAdded           SignifySignAdd
