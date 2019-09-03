@@ -12,8 +12,8 @@
 *.color2:  #058B00
 *.color10: #058B00
 
-*.color3:  #A47F00
-*.color11: #A47F00
+*.color3:  #003EAA
+*.color11: #003EAA
 
 *.color4:  #0074E8
 *.color12: #0074E8
@@ -21,8 +21,8 @@
 *.color5:  #8000D7
 *.color13: #8000D7
 
-*.color6:  #003EAA
-*.color14: #003EAA
+*.color6:  #A47F00
+*.color14: #A47F00
 
 *.color7:  #38383D
 *.color15: #535351
