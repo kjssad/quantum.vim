@@ -10,7 +10,7 @@
     <color name="string_color" value="#003EAA"/>
     <color name="function_color" value="#058B00"/>
     <color name="type_color" value="#8000D7"/>
-    <color name="constant_color" value="#E84521"/>
+    <color name="constant_color" value="#003EAA"/>
     <color name="error_color" value="#d70022"/>
     <color name="text_fg" value="#38383D"/>
     <color name="text_bg" value="#FFFFFF"/>

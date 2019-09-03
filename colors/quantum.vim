@@ -40,7 +40,7 @@ if &background ==# 'dark'
   let s:string      = '#6B89FF'
   let s:function    = '#87DE74'
   let s:type        = '#B98EFF'
-  let s:constant    = '#FC9867'
+  let s:constant    = '#6B89FF'
   let s:error       = '#EB5368'
   let s:warning     = '#FFD866'
 else
@@ -63,7 +63,7 @@ else
   let s:string      = '#003EAA'
   let s:function    = '#058B00'
   let s:type        = '#8000D7'
-  let s:constant    = '#E84521'
+  let s:constant    = '#003EAA'
   let s:error       = '#d70022'
   let s:warning     = '#A47F00'
 endif
