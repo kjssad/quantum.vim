@@ -221,6 +221,16 @@ call s:h("illuminatedWord", { "bg": s:highlight })
 
 " dense-analysis/ale
 call s:h("ALESignColumnWithoutErrors", {})
+hi link ALEError            Error
+hi link ALEWarning          WarningMsg
+hi link ALEInfo             SpecialChar
+hi link ALEStyleError       Keyword
+hi link ALEStyleWarning     SpecialChar
+hi link ALEErrorSign        Error
+hi link ALEWarningSign      WarningMsg
+hi link ALEInfoSign         SpecialChar
+hi link ALEStyleErrorSign   Keyword
+hi link ALEStyleWarningSign SpecialChar
 
 " neoclide/coc.nvim
 call s:h("CocHighlightText", { "bg": s:highlight })
