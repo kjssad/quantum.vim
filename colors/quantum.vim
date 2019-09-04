@@ -170,7 +170,7 @@ call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
 call s:h("elixirAtom", { "fg": s:special })
 hi link elixirModuleDeclaration Function
 hi link elixirMacroDeclaration  Function
-hi link elixirAlias             Constant
+hi link elixirAlias             Structure
 
 " Javascript
 call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
