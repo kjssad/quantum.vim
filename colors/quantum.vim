@@ -223,11 +223,11 @@ call s:h("illuminatedWord", { "bg": s:highlight })
 
 " dense-analysis/ale
 call s:h("ALESignColumnWithoutErrors", {})
-hi link ALEError            Error
-hi link ALEWarning          WarningMsg
-hi link ALEInfo             SpecialChar
-hi link ALEStyleError       Keyword
-hi link ALEStyleWarning     SpecialChar
+hi link ALEError            CocErrorHighlight
+hi link ALEWarning          CocWarningHighlight
+hi link ALEInfo             CocInfoHighlight
+hi link ALEStyleError       CocErrorHighlight
+hi link ALEStyleWarning     CocWarningHighlight
 hi link ALEErrorSign        Error
 hi link ALEWarningSign      WarningMsg
 hi link ALEInfoSign         SpecialChar
