@@ -165,12 +165,10 @@ call s:h("Todo", { "fg": s:constant })
 " }}}
 
 " Language Highlights {{{
-" Elixir
-call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
-call s:h("elixirAtom", { "fg": s:special })
-hi link elixirModuleDeclaration Function
-hi link elixirMacroDeclaration  Function
-hi link elixirAlias             Structure
+  " elixir-editors/vim-elixir {{{
+    call s:h("elixirPseudoVariable", { "fg": s:fg_sec, "gui": "italic" })
+    call s:h("elixirAtom", { "fg": s:special })
+  " }}}
 
 " Javascript
 call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
