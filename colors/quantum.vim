@@ -170,16 +170,17 @@ call s:h("Todo", { "fg": s:constant })
     call s:h("elixirAtom", { "fg": s:special })
   " }}}
 
-" Javascript
-call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
-call s:h("jsThis", { "fg": s:fg_sec, "gui": "italic" })
-call s:h("jsSuper", { "fg": s:fg_sec, "gui": "italic" })
-hi link jsClassKeyword  Type
-hi link jsGlobalObjects Type
-hi link jsPrototype     Type
-hi link jsArrowFunction Operator
-hi def link Noise       Delimiter
-" hi link jsObjectProp    Function
+  " pangloss/vim-javascript {{{
+    call s:h("jsFuncArgs", { "fg": s:special, "gui": "italic" })
+    call s:h("jsThis", { "fg": s:fg_sec, "gui": "italic" })
+    call s:h("jsSuper", { "fg": s:fg_sec, "gui": "italic" })
+    hi link jsClassKeyword  Type
+    hi link jsGlobalObjects Type
+    hi link jsPrototype     Type
+    hi link jsFunction      Keyword
+    hi link jsArrowFunction Operator
+    hi def link Noise       Delimiter
+  " }}}
 
 " Ruby
 call s:h("rubySymbol", { "fg": s:special })
