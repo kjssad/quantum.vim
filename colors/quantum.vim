@@ -157,11 +157,11 @@ call s:h("SpecialChar", { "fg": s:special })
 call s:h("Tag", {})
 call s:h("Delimiter", { "fg": s:fg_alt })
 call s:h("SpecialComment", { "fg": s:fg_alt })
-call s:h("Debug", {})
+call s:h("Debug", { "fg": s:warning })
 call s:h("Underlined", { "gui": "underline" })
 call s:h("Ignore", {})
 call s:h("Error", { "fg": s:error, "sp": s:error })
-call s:h("Todo", { "fg": s:constant })
+call s:h("Todo", { "fg": s:warning, "gui": 'bold' })
 " }}}
 
 " Language Highlights {{{
