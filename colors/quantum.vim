@@ -197,69 +197,76 @@ hi link htmlArg     Keyword
 hi link htmlTag     Delimiter
 hi link htmlEndTag  Delimiter
 hi link htmlH1      Identifier
-"" }}}"
+" }}}
 
 " Plugin Highlights {{{
-" scrooloose/nerdtree
-hi link NERDTreeOpenable    Directory
-hi link NERDTreeClosable    String
-hi link NERDTreeUp          Directory
-hi link NERDTreeDir         Directory
-hi link NERDTreeFile        Directory
-hi link NERDTreeDirSlash    NonText
+  " scrooloose/nerdtree {{{
+    hi link NERDTreeOpenable    Directory
+    hi link NERDTreeClosable    String
+    hi link NERDTreeUp          Directory
+    hi link NERDTreeDir         Directory
+    hi link NERDTreeFile        Directory
+    hi link NERDTreeDirSlash    NonText
+  " }}}
 
-" mhinz/vim-signify
-call s:h("SignifySignAdd", { "fg": s:function })
-call s:h("SignifySignChange", { "fg": s:warning })
-call s:h("SignifySignDelete", { "fg": s:error })
+  " mhinz/vim-signify {{{
+    call s:h("SignifySignAdd", { "fg": s:function })
+    call s:h("SignifySignChange", { "fg": s:warning })
+    call s:h("SignifySignDelete", { "fg": s:error })
+  " }}}
 
-" airblade/vim-gitgutter
-hi link GitGutterAdd    SignifySignAdd
-hi link GitGutterChange SignifySignChange
-hi link GitGutterDelete SignifySignDelete
+  " airblade/vim-gitgutter {{{ 
+    hi link GitGutterAdd    SignifySignAdd
+    hi link GitGutterChange SignifySignChange
+    hi link GitGutterDelete SignifySignDelete
+  " }}}
 
-" RRethy/vim-illuminate
-call s:h("illuminatedWord", { "bg": s:highlight })
+  " RRethy/vim-illuminate {{{
+    call s:h("illuminatedWord", { "bg": s:highlight })
+  " }}}
 
-" dense-analysis/ale
-call s:h("ALESignColumnWithoutErrors", {})
-hi link ALEError            CocErrorHighlight
-hi link ALEWarning          CocWarningHighlight
-hi link ALEInfo             CocInfoHighlight
-hi link ALEStyleError       CocErrorHighlight
-hi link ALEStyleWarning     CocWarningHighlight
-hi link ALEErrorSign        Error
-hi link ALEWarningSign      WarningMsg
-hi link ALEInfoSign         SpecialChar
-hi link ALEStyleErrorSign   Keyword
-hi link ALEStyleWarningSign SpecialChar
+  " dense-analysis/ale {{{
+    call s:h("ALESignColumnWithoutErrors", {})
+    hi link ALEError            CocErrorHighlight
+    hi link ALEWarning          CocWarningHighlight
+    hi link ALEInfo             CocInfoHighlight
+    hi link ALEStyleError       CocErrorHighlight
+    hi link ALEStyleWarning     CocWarningHighlight
+    hi link ALEErrorSign        Error
+    hi link ALEWarningSign      WarningMsg
+    hi link ALEInfoSign         SpecialChar
+    hi link ALEStyleErrorSign   Keyword
+    hi link ALEStyleWarningSign SpecialChar
+  " }}}
 
-" neoclide/coc.nvim
-call s:h("CocHighlightText", { "bg": s:highlight })
-call s:h("CocCodeLens", { "fg": s:virtualtext })
-call s:h("CocErrorHighlight", { "gui": "undercurl", "sp": s:error })
-call s:h("CocWarningHighlight", { "gui": "undercurl", "sp": s:warning })
-call s:h("CocInfoHighlight", { "gui": "undercurl", "sp": s:special })
-call s:h("CocHintHighlight", { "gui": "undercurl", "sp": s:function })
-call s:h("CocGitChangeRemovedSign", { "fg": s:string })
-hi link CocErrorSign            Error
-hi link CocWarningSign          WarningMsg
-hi link CocInfoSign             SpecialChar
-hi link CocHintSign             Function
-hi link CocGitAddedSign         SignifySignAdd
-hi link CocGitChangedSign       SignifySignChange
-hi link CocGitRemovedSign       SignifySignDelete
-hi link CocGitTopRemovedSign    SignifySignDelete
+  " neoclide/coc.nvim {{{
+    call s:h("CocHighlightText", { "bg": s:highlight })
+    call s:h("CocCodeLens", { "fg": s:virtualtext })
+    call s:h("CocErrorHighlight", { "gui": "undercurl", "sp": s:error })
+    call s:h("CocWarningHighlight", { "gui": "undercurl", "sp": s:warning })
+    call s:h("CocInfoHighlight", { "gui": "undercurl", "sp": s:special })
+    call s:h("CocHintHighlight", { "gui": "undercurl", "sp": s:function })
+    call s:h("CocGitChangeRemovedSign", { "fg": s:string })
+    hi link CocErrorSign            Error
+    hi link CocWarningSign          WarningMsg
+    hi link CocInfoSign             SpecialChar
+    hi link CocHintSign             Function
+    hi link CocGitAddedSign         SignifySignAdd
+    hi link CocGitChangedSign       SignifySignChange
+    hi link CocGitRemovedSign       SignifySignDelete
+    hi link CocGitTopRemovedSign    SignifySignDelete
+  " }}}
 
-" tpope/vim-fugitive
-hi link diffAdded                   SignifySignAdd
-hi link diffRemoved                 SignifySignDelete
-hi link fugitiveHash                String
-hi link fugitiveSymbolicRef         Structure
-hi link fugitiveUntrackedModifier   Function
-hi link fugitiveUnstagedModifier    WarningMsg
-hi link fugitiveStagedModifier      SpecialChar
-"" }}}
+  " tpope/vim-fugitive {{{
+    hi link diffAdded                   SignifySignAdd
+    hi link diffRemoved                 SignifySignDelete
+    hi link fugitiveHash                String
+    hi link fugitiveSymbolicRef         Structure
+    hi link fugitiveUntrackedModifier   Function
+    hi link fugitiveUnstagedModifier    WarningMsg
+    hi link fugitiveStagedModifier      SpecialChar
+  " }}}
+" }}}
 
 " Nvim Terminal {{{
 if has("nvim")
