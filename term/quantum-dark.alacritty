@@ -1,0 +1,35 @@
+# Quantum Colors (Firefox devtools)
+colors:
+  # Default colors
+  primary:
+    background: "0x2a2a2e"
+    foreground: "0xD7D7DB"
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: "0x2a2a2e"
+    cursor: "0x75BFFF"
+
+  # Normal colors
+  normal:
+    black: "0x2a2a2e"
+    red: "0xEB5368"
+    green: "0x87DE74"
+    yellow: "0xFFD866"
+    blue: "0x6B89FF"
+    magenta: "0xB98EFF"
+    cyan: "0x75BFFF"
+    white: "0xD7D7DB"
+
+  # Bright colors
+  bright:
+    black: "0x737373"
+    red: "0xFF7DE9"
+    green: "0x87DE74"
+    yellow: "0xFFD866"
+    blue: "0x6B89FF"
+    magenta: "0xB98EFF"
+    cyan: "0x75BFFF"
+    white: "0x939295"
+
+  indexed_colors: []
