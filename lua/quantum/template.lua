@@ -86,13 +86,13 @@ function M.setup()
     Typedef = { fg = c.purple },
     Special = { fg = c.cyan },
     SpecialChar = { fg = c.cyan },
-    Tag = {},
+    Tag = { fg = c.ui_green, gui = "bold" },
     Delimiter = { fg = c.fg_alt },
-    SpecialComment = { fg = c.fg_alt },
-    Debug = { fg = c.ui_yellow },
+    SpecialComment = { fg = c.fg_alt, gui = "bold" },
+    Debug = { fg = c.ui_yellow, gui = "bold" },
     Underlined = { gui = "underline" },
     Ignore = {},
-    Error = { fg = c.ui_red, sp = c.ui_red },
+    Error = { fg = c.ui_red, gui = "bold" },
     Todo = { fg = c.ui_cyan, gui = "bold" },
   }
 
@@ -169,7 +169,7 @@ function M.setup()
     -- TSEnvironmentName = { link = "Type" },
     -- TSTitle = { link = "Title" },
     -- TSLiteral = { link = "String" },
-    TSURI = { gui = "underline", sp = c.ui_green },
+    -- TSURI = { link = "Underline" },
     -- TSComment = { link = "Comment" },
     TSNote = { fg = c.bg, bg = c.ui_cyan },
     TSWarning = { fg = c.bg, bg = c.ui_yellow },
@@ -203,7 +203,7 @@ function M.setup()
     CmpItemAbbr = { fg = c.fg_sec },
     CmpItemAbbrDeprecated = { fg = c.comment, gui = "italic" },
     CmpItemAbbrMatch = { fg = c.fg, gui = "bold" },
-    CmpItemAbbrMatchFuzzy = { fg = c.ui_cyan, gui = "bold" },
+    CmpItemAbbrMatchFuzzy = { fg = c.ui_green, gui = "bold" },
     CmpItemMenu = { fg = c.comment },
     CmpItemKindDefault = { fg = c.fg_alt },
     CmpItemKindMethod = { fg = c.ui_purple },
@@ -220,10 +220,15 @@ function M.setup()
 
     -- lukas-reineke/indent-blankline.nvim
     IndentBlanklineContextChar = { fg = c.comment },
+    IndentBlanklineContextStart = { gui = "underline", sp = c.comment },
 
     -- nvim-telescope/telescope.nvim
     TelescopeBorder = { fg = c.bg_black },
     TelescopeTitle = { fg = c.fg_sec, bg = c.bg_black },
+    TelescopeMatching = { fg = c.ui_green, gui = "bold" },
+
+    -- nvim-treesitter/playground
+    TSPlaygroundFocus = { fg = c.guides },
   }
 
   return template
