@@ -1,7 +1,6 @@
 local M = {}
 
-function M.setup()
-  local config = require("quantum.config")
+function M.setup(options)
   local c = require("quantum.palette")
   local template = {}
 
@@ -16,7 +15,7 @@ function M.setup()
     DiffChange = { bg = c.diff_yellow },
     DiffDelete = { bg = c.diff_red },
     DiffText = { bg = c.diff_text },
-    EndOfBuffer = { fg = config.hide_end_of_buffer and c.bg or c.guides },
+    EndOfBuffer = { fg = options.hide_end_of_buffer and c.bg or c.guides },
     ErrorMsg = { fg = c.ui_red },
     VertSplit = { fg = c.bg_black },
     Folded = { fg = c.fg_alt, bg = c.guides },
@@ -59,21 +58,21 @@ function M.setup()
   }
 
   template.syntax = {
-    Comment = { fg = c.comment, gui = config.comment_style },
+    Comment = { fg = c.comment, gui = options.style.comments },
     Constant = { fg = c.orange },
     String = { fg = c.blue },
     Character = { fg = c.blue },
     Number = { fg = c.orange },
     Boolean = { fg = c.orange },
     Float = { fg = c.orange },
-    Identifier = { fg = c.fg, gui = config.variable_style },
-    Function = { fg = c.green, gui = config.function_style },
+    Identifier = { fg = c.fg, gui = options.style.variables },
+    Function = { fg = c.green, gui = options.style.functions },
     Statement = { fg = c.magenta },
     Conditional = { fg = c.magenta },
     Repeat = { fg = c.magenta },
     Label = { fg = c.magenta },
     Operator = { fg = c.magenta },
-    Keyword = { fg = c.magenta, gui = config.keyword_style },
+    Keyword = { fg = c.magenta, gui = options.style.keywords },
     Exception = { fg = c.magenta },
     PreProc = { fg = c.magenta },
     Include = { fg = c.magenta },
