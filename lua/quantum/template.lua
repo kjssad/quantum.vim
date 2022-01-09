@@ -53,7 +53,7 @@ function M.setup(options)
     Title = { fg = c.blue },
     Visual = { bg = c.selection },
     VisualNOS = {},
-    WarningMsg = { fg = c.yellow },
+    WarningMsg = { fg = c.ui_yellow },
     WildMenu = { fg = c.bg, bg = c.bg_alt },
   }
 
