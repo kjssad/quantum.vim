@@ -13,6 +13,8 @@ return {
   comment = "#737373",
   search = "#58585C",
   guides = "#414145",
+  selection = "#393f4c",
+  fold = "#2F323A",
 
   blue = "#6b89ff",
   cyan = "#75bfff",
@@ -26,6 +28,12 @@ return {
   ui_red = "#f25e72",
   ui_yellow = "#ffd866",
   ui_purple = "#b058dd",
+
+  bg_cyan = "#2a3e50",
+  bg_green = "#324434",
+  bg_purple = "#3f2e4b",
+  bg_red = "#4c2f36",
+  bg_yellow = "#4F4734",
 
   git_yellow = "#e0b17f",
   git_green = "#29aa84",
