@@ -96,9 +96,9 @@ function M.setup(options)
   }
 
   template.lsp = {
-    LspReferenceText = { bg = c.guides },
-    LspReferenceRead = { bg = c.guides },
-    LspReferenceWrite = { bg = c.guides },
+    LspReferenceText = { bg = c.bg_green },
+    LspReferenceRead = { bg = c.bg_cyan },
+    LspReferenceWrite = { bg = c.bg_green },
 
     DiagnosticError = { fg = c.ui_red },
     DiagnosticWarn = { fg = c.ui_yellow },
