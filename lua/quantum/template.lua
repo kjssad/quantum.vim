@@ -218,8 +218,9 @@ function M.setup(options)
     CmpItemKindEnumMember = { fg = c.ui_yellow },
 
     -- lukas-reineke/indent-blankline.nvim
-    IndentBlanklineContextChar = { fg = c.comment },
-    IndentBlanklineContextStart = { gui = "underline", sp = c.comment },
+    IndentBlanklineChar = { fg = c.bg_alt },
+    IndentBlanklineContextChar = { fg = c.search },
+    IndentBlanklineContextStart = { gui = "underline", sp = c.search },
 
     -- nvim-telescope/telescope.nvim
     TelescopeBorder = { fg = c.bg_black },
