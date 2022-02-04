@@ -191,16 +191,19 @@ function M.setup(options)
     GitSignsCurrentLineBlame = { fg = c.search },
 
     -- kyazdani42/nvim-tree.lua
-    NvimTreeNormal = { bg = c.bg_dark },
-    NvimTreeIndentMarker = { fg = c.bg_alt },
+    NvimTreeIndentMarker = { fg = c.bg_sec },
     NvimTreeGitDirty = { fg = c.git_yellow },
     NvimTreeGitNew = { fg = c.git_green },
     NvimTreeGitDeleted = { fg = c.git_red },
+    NvimTreeNormal = { fg = c.fg_sec, bg = c.bg_dark },
+    NvimTreeCursorLine = { bg = c.bg },
+    NvimTreeStatusLineNC = { bg = c.bg_dark },
+    NvimTreeCursorColumn = { bg = c.bg },
     NvimTreeVertSplit = { fg = c.bg_dark, bg = c.bg_dark },
 
     -- hrsh7th/nvim-cmp
     CmpItemAbbr = { fg = c.fg_sec },
-    CmpItemAbbrDeprecated = { fg = c.comment, gui = "italic" },
+    CmpItemAbbrDeprecated = { fg = c.comment, gui = "strikethrough" },
     CmpItemAbbrMatch = { fg = c.fg, gui = "bold" },
     CmpItemAbbrMatchFuzzy = { fg = c.ui_green, gui = "bold" },
     CmpItemMenu = { fg = c.comment },
@@ -223,12 +226,24 @@ function M.setup(options)
     IndentBlanklineContextStart = { gui = "underline", sp = c.search },
 
     -- nvim-telescope/telescope.nvim
+    TelescopeSelection = { bg = c.bg_alt },
     TelescopeBorder = { fg = c.bg_black },
     TelescopeTitle = { fg = c.fg_sec, bg = c.bg_black },
     TelescopeMatching = { fg = c.ui_green, gui = "bold" },
 
     -- nvim-treesitter/playground
     TSPlaygroundFocus = { fg = c.guides },
+
+    -- glepnir/dashboard-nvim
+    DashboardHeader = { fg = c.comment },
+    DashboardCenter = { fg = c.comment },
+    DashboardShortcut = { fg = c.ui_green },
+    DashboardFooter = { fg = c.comment },
+
+    -- folke/trouble.nvim
+    TroubleCount = { bg = c.bg_alt },
+    TroubleIndent = { fg = c.bg_alt },
+    TroubleText = { fg = c.fg_sec },
   }
 
   return template
