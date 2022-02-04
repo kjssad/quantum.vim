@@ -133,16 +133,16 @@ function M.setup(options)
     -- TSFloat = { link = "Float" },
     -- TSFunction = { link = "Function" },
     -- TSFuncBuiltin = { link = "Special" },
-    -- TSFuncMacro = { link = "Macro" },
+    TSFuncMacro = { link = "Function" }, -- Macro
     -- TSParameter = { link = "Identifier" },
     -- TSParameterReference = { link = "TSParameter" },
     -- TSMethod = { link = "Function" },
     -- TSField = { link = "Identifier" },
     -- TSProperty = { link = "Identifier" },
-    -- TSConstructor = { link = "Special" },
+    TSConstructor = { link = "Type" }, -- Special
     -- TSAnnotation = { link = "PreProc" },
     -- TSAttribute = { link = "PreProc" },
-    -- TSNamespace = { link = "Include" },
+    TSNamespace = { link = "Type" }, -- Include
     -- TSSymbol = { link = "Identifier" },
     -- TSConditional = { link = "Conditional" },
     -- TSRepeat = { link = "Repeat" },
