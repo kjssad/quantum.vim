@@ -178,12 +178,18 @@ function M.setup(options)
     -- TSTagAttribute = { link = "TSProperty" },
   }
 
-  template.plugins = {
+  template.others = {
     -- diff
     diffAdded = { fg = c.git_green },
     diffRemoved = { fg = c.git_red },
     diffChanged = { fg = c.git_yellow },
 
+    -- markdown
+    markdownCode = { fg = c.cyan },
+    markdownCodeBlock = { fg = c.cyan },
+  }
+
+  template.plugins = {
     -- lewis6991/gitsigns.nvim
     GitSignsAdd = { fg = c.git_green },
     GitSignsDelete = { fg = c.git_red },

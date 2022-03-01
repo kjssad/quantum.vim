@@ -18,6 +18,7 @@ function M.colorscheme()
     template.syntax,
     template.lsp,
     template.treesitter,
+    template.others,
     template.plugins,
   }
 
