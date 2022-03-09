@@ -39,18 +39,18 @@ function M.setup(options)
     Question = { fg = c.ui_cyan },
     QuickFixLine = { bg = c.bg_alt },
     Search = { bg = c.bg_purple },
-    SpecialKey = { fg = c.comment, gui = "italic" },
-    SpellBad = { bg = c.bg_red, gui = "undercurl", sp = c.ui_red },
-    SpellCap = { bg = c.bg_yellow, gui = "undercurl", sp = c.ui_yellow },
-    SpellLocal = { bg = c.bg_cyan, gui = "undercurl", sp = c.ui_cyan },
-    SpellRare = { bg = c.bg_cyan, gui = "undercurl", sp = c.ui_cyan },
+    SpecialKey = { fg = c.comment, italic = true },
+    SpellBad = { bg = c.bg_red, undercurl = true, sp = c.ui_red },
+    SpellCap = { bg = c.bg_yellow, undercurl = true, sp = c.ui_yellow },
+    SpellLocal = { bg = c.bg_cyan, undercurl = true, sp = c.ui_cyan },
+    SpellRare = { bg = c.bg_cyan, undercurl = true, sp = c.ui_cyan },
     StatusLine = { fg = c.fg_sec, bg = c.bg_dark },
     StatusLineNC = { fg = c.comment, bg = c.bg_dark },
     TabLine = { fg = c.fg_alt, bg = c.bg_dark },
     TabLineFill = { fg = c.fg_alt, bg = c.bg_dark },
     TabLineSel = { fg = c.fg, bg = c.bg_dark },
     Terminal = { fg = c.fg, bg = c.bg },
-    Title = { fg = c.ui_cyan, style = "bold" },
+    Title = { fg = c.ui_cyan, bold = true },
     Visual = { bg = c.selection },
     VisualNOS = {},
     WarningMsg = { fg = c.ui_yellow },
@@ -58,21 +58,21 @@ function M.setup(options)
   }
 
   template.syntax = {
-    Comment = { fg = c.comment, gui = options.style.comments },
+    Comment = { fg = c.comment, italic = options.style.italics.comments },
     Constant = { fg = c.orange },
     String = { fg = c.blue },
     Character = { fg = c.blue },
     Number = { fg = c.orange },
     Boolean = { fg = c.orange },
     Float = { fg = c.orange },
-    Identifier = { fg = c.cyan, gui = options.style.variables },
-    Function = { fg = c.green, gui = options.style.functions },
+    Identifier = { fg = c.cyan, italic = options.style.italics.variables },
+    Function = { fg = c.green, italic = options.style.italics.functions },
     Statement = { fg = c.magenta },
     Conditional = { fg = c.magenta },
     Repeat = { fg = c.magenta },
     Label = { fg = c.magenta },
     Operator = { fg = c.magenta },
-    Keyword = { fg = c.magenta, gui = options.style.keywords },
+    Keyword = { fg = c.magenta, italic = options.style.italics.keywords },
     Exception = { fg = c.magenta },
     PreProc = { fg = c.magenta },
     Include = { fg = c.magenta },
@@ -85,14 +85,14 @@ function M.setup(options)
     Typedef = { fg = c.purple },
     Special = { fg = c.orange },
     SpecialChar = { fg = c.orange },
-    Tag = { fg = c.ui_green, gui = "bold" },
+    Tag = { fg = c.ui_green, bold = true },
     Delimiter = { fg = c.fg_alt },
-    SpecialComment = { fg = c.fg_alt, gui = "bold" },
-    Debug = { fg = c.ui_yellow, gui = "bold" },
-    Underlined = { gui = "underline" },
+    SpecialComment = { fg = c.fg_alt, bold = true },
+    Debug = { fg = c.ui_yellow, bold = true },
+    Underlined = { underline = true },
     Ignore = {},
-    Error = { fg = c.ui_red, gui = "bold" },
-    Todo = { fg = c.ui_cyan, gui = "bold" },
+    Error = { fg = c.ui_red, bold = true },
+    Todo = { fg = c.ui_cyan, bold = true },
   }
 
   template.lsp = {
@@ -110,10 +110,10 @@ function M.setup(options)
     DiagnosticVirtualTextInfo = { fg = c.ui_cyan },
     DiagnosticVirtualTextHint = { fg = c.ui_green },
 
-    DiagnosticUnderlineError = { gui = "undercurl", sp = c.ui_red },
-    DiagnosticUnderlineWarn = { gui = "undercurl", sp = c.ui_yellow },
-    DiagnosticUnderlineInfo = { gui = "undercurl", sp = c.ui_cyan },
-    DiagnosticUnderlineHint = { gui = "undercurl", sp = c.ui_green },
+    DiagnosticUnderlineError = { undercurl = true, sp = c.ui_red },
+    DiagnosticUnderlineWarn = { undercurl = true, sp = c.ui_yellow },
+    DiagnosticUnderlineInfo = { undercurl = true, sp = c.ui_cyan },
+    DiagnosticUnderlineHint = { undercurl = true, sp = c.ui_green },
   }
 
   template.treesitter = {
@@ -209,9 +209,9 @@ function M.setup(options)
 
     -- hrsh7th/nvim-cmp
     CmpItemAbbr = { fg = c.fg_sec },
-    CmpItemAbbrDeprecated = { fg = c.comment, gui = "strikethrough" },
-    CmpItemAbbrMatch = { fg = c.fg, gui = "bold" },
-    CmpItemAbbrMatchFuzzy = { fg = c.ui_green, gui = "bold" },
+    CmpItemAbbrDeprecated = { fg = c.comment, strikethrough = true },
+    CmpItemAbbrMatch = { fg = c.fg, bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = c.ui_green, bold = true },
     CmpItemMenu = { fg = c.comment },
     CmpItemKindDefault = { fg = c.fg_alt },
     CmpItemKindMethod = { fg = c.ui_purple },
@@ -229,13 +229,13 @@ function M.setup(options)
     -- lukas-reineke/indent-blankline.nvim
     IndentBlanklineChar = { fg = c.bg_alt },
     IndentBlanklineContextChar = { fg = c.search },
-    IndentBlanklineContextStart = { gui = "underline", sp = c.search },
+    IndentBlanklineContextStart = { underline = true, sp = c.search },
 
     -- nvim-telescope/telescope.nvim
     TelescopeSelection = { bg = c.bg_alt },
     TelescopeBorder = { fg = c.bg_black },
     TelescopeTitle = { fg = c.fg_sec, bg = c.bg_black },
-    TelescopeMatching = { fg = c.ui_green, gui = "bold" },
+    TelescopeMatching = { fg = c.ui_green, bold = true },
 
     -- nvim-treesitter/playground
     TSPlaygroundFocus = { fg = c.guides },

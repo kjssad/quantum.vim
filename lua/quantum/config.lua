@@ -2,10 +2,12 @@ local config = {}
 
 config.options = {
   style = {
-    comments = "italic",
-    variables = "italic",
-    functions = "NONE",
-    keywords = "NONE",
+    italics = {
+      comments = true,
+      variables = true,
+      functions = false,
+      keywords = false,
+    }
   },
   hide_end_of_buffer = true,
 }
