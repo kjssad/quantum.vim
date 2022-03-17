@@ -48,7 +48,7 @@ function M.setup(options)
     StatusLineNC = { fg = c.comment, bg = c.bg_dark },
     TabLine = { fg = c.fg_alt, bg = c.bg_dark },
     TabLineFill = { fg = c.fg_alt, bg = c.bg_dark },
-    TabLineSel = { fg = c.fg, bg = c.bg_dark },
+    TabLineSel = { fg = c.fg, bg = c.bg },
     Terminal = { fg = c.fg, bg = c.bg },
     Title = { fg = c.ui_cyan, bold = true },
     Visual = { bg = c.selection },
@@ -99,6 +99,7 @@ function M.setup(options)
     LspReferenceText = { bg = c.bg_green },
     LspReferenceRead = { bg = c.bg_cyan },
     LspReferenceWrite = { bg = c.bg_green },
+    LspCodeLens = { fg = c.fg_alt, underline = true },
 
     DiagnosticError = { fg = c.ui_red },
     DiagnosticWarn = { fg = c.ui_yellow },
@@ -175,7 +176,7 @@ function M.setup(options)
     TSDanger = { fg = c.bg, bg = c.ui_red },
     -- TSTag = { link = "Label" },
     -- TSTagDelimiter = { link = "Delimiter" },
-    -- TSTagAttribute = { link = "TSProperty" },
+    TSTagAttribute = { link = "Type" }, -- TSProperty
   }
 
   template.others = {
