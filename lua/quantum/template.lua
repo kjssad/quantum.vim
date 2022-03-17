@@ -195,6 +195,9 @@ function M.setup(options)
     GitSignsDelete = { fg = c.git_red },
     GitSignsChange = { fg = c.git_yellow },
     GitSignsCurrentLineBlame = { fg = c.search },
+    GitSignsAddInline = { fg = c.bg, bg = c.git_green },
+    GitSignsChangeInline = { bg = c.git_yellow },
+    GitSignsDeleteInline = { fg = c.bg, bg = c.git_red },
 
     -- kyazdani42/nvim-tree.lua
     NvimTreeIndentMarker = { fg = c.bg_sec },
@@ -225,6 +228,8 @@ function M.setup(options)
     CmpItemKindValue = { fg = c.ui_yellow },
     CmpItemKindEnum = { fg = c.ui_yellow },
     CmpItemKindEnumMember = { fg = c.ui_yellow },
+    CmpBorderedWindow_Normal = { bg = c.bg_dark },
+    CmpBorderedWindow_CursorLine = { bg = c.bg_alt },
 
     -- lukas-reineke/indent-blankline.nvim
     IndentBlanklineChar = { fg = c.bg_alt },
@@ -236,6 +241,10 @@ function M.setup(options)
     TelescopeBorder = { fg = c.bg_black },
     TelescopeTitle = { fg = c.fg_sec, bg = c.bg_black },
     TelescopeMatching = { fg = c.ui_green, bold = true },
+    TelescopeResultsDiffAdd = { fg = c.git_green },
+    TelescopeResultsDiffDelete = { fg = c.git_red },
+    TelescopeResultsDiffChange = { fg = c.git_yellow },
+    TelescopeResultsDiffUntracked = { fg = c.git_green },
 
     -- nvim-treesitter/playground
     TSPlaygroundFocus = { fg = c.guides },
@@ -250,6 +259,7 @@ function M.setup(options)
     TroubleCount = { bg = c.bg_alt },
     TroubleIndent = { fg = c.bg_alt },
     TroubleText = { fg = c.fg_sec },
+    TroubleNormal = { fg = c.fg_sec, bg = c.bg_dark },
   }
 
   return template
