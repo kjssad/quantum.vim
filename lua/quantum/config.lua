@@ -10,6 +10,7 @@ config.options = {
     }
   },
   hide_end_of_buffer = true,
+  colors = {},
 }
 
 ---@param opts table user configuration

@@ -20,6 +20,7 @@ function M.colorscheme()
     template.treesitter,
     template.others,
     template.plugins,
+    options.colors,
   }
 
   local util = require("quantum.util")
