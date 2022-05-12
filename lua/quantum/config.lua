@@ -11,6 +11,7 @@ config.options = {
   },
   hide_end_of_buffer = true,
   colors = {},
+  lighter_borders = false,
 }
 
 ---@param opts table user configuration

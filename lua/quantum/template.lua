@@ -4,6 +4,8 @@ function M.setup(options)
   local c = require("quantum.palette")
   local template = {}
 
+  c.border = options.lighter_borders and c.guides or c.bg_black
+
   template.builtins = {
     ColorColumn = { bg = c.bg_dark },
     Conceal = { fg = c.fg_alt },
@@ -17,7 +19,7 @@ function M.setup(options)
     DiffText = { bg = c.diff_text },
     EndOfBuffer = { fg = options.hide_end_of_buffer and c.bg or c.guides },
     ErrorMsg = { fg = c.ui_red },
-    VertSplit = { fg = c.bg_black },
+    VertSplit = { fg = c.border },
     Folded = { fg = c.fg_sec, bg = c.fold },
     FoldColumn = { fg = c.comment },
     SignColumn = { fg = c.fg_gutter, bg = c.bg },
@@ -31,7 +33,7 @@ function M.setup(options)
     NonText = { fg = c.guides },
     Normal = { fg = c.fg, bg = c.bg },
     NormalFloat = { fg = c.fg, bg = c.bg_dark },
-    FloatBorder = { fg = c.bg_black, bg = c.bg_dark },
+    FloatBorder = { fg = c.border, bg = c.bg_dark },
     Pmenu = { fg = c.fg_sec, bg = c.bg_dark },
     PmenuSel = { bg = c.bg_alt },
     PmenuSbar = { bg = c.fg_gutter },
@@ -239,8 +241,8 @@ function M.setup(options)
 
     -- nvim-telescope/telescope.nvim
     TelescopeSelection = { bg = c.bg_alt },
-    TelescopeBorder = { fg = c.bg_black },
-    TelescopeTitle = { fg = c.fg_sec, bg = c.bg_black },
+    TelescopeBorder = { fg = c.border },
+    TelescopeTitle = { fg = c.fg_sec, bg = c.border },
     TelescopeMatching = { fg = c.ui_green, bold = true },
     TelescopeResultsDiffAdd = { fg = c.git_green },
     TelescopeResultsDiffDelete = { fg = c.git_red },
