@@ -211,7 +211,7 @@ function M.setup(options)
     NvimTreeCursorLine = { bg = c.bg },
     NvimTreeStatusLineNC = { bg = c.bg_dark },
     NvimTreeCursorColumn = { bg = c.bg },
-    NvimTreeVertSplit = { fg = c.bg_dark, bg = c.bg_dark },
+    NvimTreeVertSplit = { fg = c.border, bg = c.bg },
 
     -- hrsh7th/nvim-cmp
     CmpItemAbbr = { fg = c.fg_sec },
