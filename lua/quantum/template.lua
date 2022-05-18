@@ -57,6 +57,7 @@ function M.setup(options)
     VisualNOS = {},
     WarningMsg = { fg = c.ui_yellow },
     WildMenu = { fg = c.bg, bg = c.bg_alt },
+    WinBar = { fg = c.fg_alt },
   }
 
   template.syntax = {
