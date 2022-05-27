@@ -1,10 +1,8 @@
 local M = {}
 
 function M.setup(options)
-  local c = require("quantum.palette")
+  local c = require("quantum.palette").get_palette(options.palette)
   local template = {}
-
-  c.border = options.lighter_borders and c.guides or c.bg_black
 
   template.builtins = {
     ColorColumn = { bg = c.bg_dark },
@@ -23,19 +21,19 @@ function M.setup(options)
     Folded = { fg = c.fg_sec, bg = c.fold },
     FoldColumn = { fg = c.comment },
     SignColumn = { fg = c.fg_gutter, bg = c.bg },
-    IncSearch = { fg = c.fg, bg = c.ui_purple },
+    IncSearch = { fg = c.bg, bg = c.ui_purple },
     LineNr = { fg = c.fg_gutter },
     CursorLineNr = { fg = c.fg_sec },
-    MatchParen = { fg = c.fg, bg = c.search },
+    MatchParen = { fg = c.fg, bg = c.bracket_match },
     ModeMsg = { fg = c.ui_cyan },
     MsgArea = { fg = c.fg_sec },
     MoreMsg = { fg = c.ui_cyan },
     NonText = { fg = c.guides },
     Normal = { fg = c.fg, bg = c.bg },
     NormalFloat = { fg = c.fg, bg = c.bg_dark },
-    FloatBorder = { fg = c.border, bg = c.bg_dark },
+    FloatBorder = { fg = c.border, bg = c.bg },
     Pmenu = { fg = c.fg_sec, bg = c.bg_dark },
-    PmenuSel = { bg = c.bg_alt },
+    PmenuSel = { bg = c.selection },
     PmenuSbar = { bg = c.fg_gutter },
     PmenuThumb = { bg = c.comment },
     Question = { fg = c.ui_cyan },
@@ -46,8 +44,8 @@ function M.setup(options)
     SpellCap = { bg = c.bg_yellow, undercurl = true, sp = c.ui_yellow },
     SpellLocal = { bg = c.bg_cyan, undercurl = true, sp = c.ui_cyan },
     SpellRare = { bg = c.bg_cyan, undercurl = true, sp = c.ui_cyan },
-    StatusLine = { fg = c.fg_sec, bg = c.bg_dark },
-    StatusLineNC = { fg = c.comment, bg = c.bg_dark },
+    StatusLine = { fg = c.fg_alt, bg = c.bg_dark },
+    StatusLineNC = { fg = c.bracket_match, bg = c.bg_dark },
     TabLine = { fg = c.fg_alt, bg = c.bg_dark },
     TabLineFill = { fg = c.fg_alt, bg = c.bg_dark },
     TabLineSel = { fg = c.fg, bg = c.bg },
@@ -198,18 +196,18 @@ function M.setup(options)
     GitSignsAdd = { fg = c.git_green },
     GitSignsDelete = { fg = c.git_red },
     GitSignsChange = { fg = c.git_yellow },
-    GitSignsCurrentLineBlame = { fg = c.search },
+    GitSignsCurrentLineBlame = { fg = c.bracket_match },
     GitSignsAddInline = { fg = c.bg, bg = c.git_green },
     GitSignsChangeInline = { bg = c.git_yellow },
     GitSignsDeleteInline = { fg = c.bg, bg = c.git_red },
 
     -- kyazdani42/nvim-tree.lua
-    NvimTreeIndentMarker = { fg = c.bg_sec },
+    NvimTreeIndentMarker = { fg = c.guides },
     NvimTreeGitDirty = { fg = c.git_yellow },
     NvimTreeGitNew = { fg = c.git_green },
     NvimTreeGitDeleted = { fg = c.git_red },
     NvimTreeNormal = { fg = c.fg_sec, bg = c.bg_dark },
-    NvimTreeCursorLine = { bg = c.bg },
+    NvimTreeCursorLine = { bg = c.selection },
     NvimTreeStatusLineNC = { bg = c.bg_dark },
     NvimTreeCursorColumn = { bg = c.bg },
     NvimTreeVertSplit = { fg = c.border, bg = c.bg },
@@ -237,11 +235,11 @@ function M.setup(options)
 
     -- lukas-reineke/indent-blankline.nvim
     IndentBlanklineChar = { fg = c.bg_alt },
-    IndentBlanklineContextChar = { fg = c.search },
-    IndentBlanklineContextStart = { underline = true, sp = c.search },
+    IndentBlanklineContextChar = { fg = c.bracket_match },
+    IndentBlanklineContextStart = { underline = true, sp = c.bracket_match },
 
     -- nvim-telescope/telescope.nvim
-    TelescopeSelection = { bg = c.bg_alt },
+    TelescopeSelection = { bg = c.selection },
     TelescopeBorder = { fg = c.border },
     TelescopeTitle = { fg = c.fg_sec, bg = c.border },
     TelescopeMatching = { fg = c.ui_green, bold = true },
@@ -251,7 +249,7 @@ function M.setup(options)
     TelescopeResultsDiffUntracked = { fg = c.git_green },
 
     -- nvim-treesitter/playground
-    TSPlaygroundFocus = { fg = c.guides },
+    TSPlaygroundFocus = { bg = c.guides },
 
     -- glepnir/dashboard-nvim
     DashboardHeader = { fg = c.comment },

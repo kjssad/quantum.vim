@@ -11,6 +11,9 @@ function M.colorscheme()
   vim.o.termguicolors = true
 
   local options = require("quantum.config").options
+
+  options.palette = vim.g.quantum_variant or vim.o.background
+
   local template = require("quantum.template").setup(options)
 
   local sets = {
