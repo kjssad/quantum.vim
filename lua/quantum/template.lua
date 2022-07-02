@@ -200,6 +200,7 @@ function M.setup(options)
     GitSignsAddInline = { fg = c.bg, bg = c.git_green },
     GitSignsChangeInline = { bg = c.git_yellow },
     GitSignsDeleteInline = { fg = c.bg, bg = c.git_red },
+    GitSignsDeleteLn = { bg = c.diff_red },
 
     -- kyazdani42/nvim-tree.lua
     NvimTreeIndentMarker = { fg = c.guides },
