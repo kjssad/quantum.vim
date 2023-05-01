@@ -5,7 +5,7 @@ local quantum = {}
 quantum.normal = {
   a = { fg = c.fg_sec, bg = c.border, gui = "bold" },
   b = { fg = c.fg_alt, bg = c.bg_alt },
-  c = { fg = c.fg_alt, bg = c.bg_dark },
+  c = { fg = c.fg_alt, bg = c.bg_alt },
 }
 
 quantum.insert = {
@@ -29,9 +29,9 @@ quantum.command = {
 }
 
 quantum.inactive = {
-  a = { fg = c.comment, bg = c.bg_dark },
-  b = { fg = c.comment, bg = c.bg_dark },
-  c = { fg = c.comment, bg = c.bg_dark },
+  a = { fg = c.comment, bg = c.bg_alt },
+  b = { fg = c.comment, bg = c.bg_alt },
+  c = { fg = c.comment, bg = c.bg_alt },
 }
 
 return quantum
